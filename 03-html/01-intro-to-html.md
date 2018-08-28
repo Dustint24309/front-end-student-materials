@@ -50,7 +50,7 @@ For example, if we wanted to create a paragraph, we'd use the `<p>` opening and 
 + `<!DOCTYPE html>` - This tag tells your browser that the rest of text that is about to follow is apart of an HTML document. If you leave it out, some browsers won't 'know' what type of document they are looking at (computers are dumb), and the page will break. It's a little boring, but you should have it.
 + `<html>` - The most basic HTML tags are simply `<html>` and `</html>`, and **all the content of your pages will be written inside these tags.**
 + `<head>` - The `<head>` contains information *about* your website, but not actual content that will show up on the page (think of it as the 'brains' of your webpage.) It will contain things like links to stylesheets and code that will make your page beautiful and interactive.
-+ The `<body>` contains all the content of your page that will actually show up on the screen. 90% of the HTML you write will go inside the `<head>`
++ The `<body>` contains all the content of your page that will actually show up on the screen. 90% of the HTML you write will go inside the `<body>`
 
 
 ## Proper Indentation - HTML as a Tree Structure
