@@ -64,5 +64,21 @@ We can now style this div by referencing the id or class that we've given it (in
 
 You should use `<div>` elements whenever you want to create a "group" of elements that receive the same styling and layout (more on layout later).
 
+For lists, use `<ul>` and `<ol>`. There are unordered lists and ordered lists. They work like this:
+
+```html
+<ul>
+  <li>First List Item</li>
+  <li>Second List Item</li>
+  <li>Third List Item</li>  
+</ul>
+
+<ol>
+  <li>First List Item</li>
+  <li>Second List Item</li>
+  <li>Third List Item</li>   
+</ol>  
+```
+
 ## Resources
 + [Divs Explained on Stack Overflow](http://stackoverflow.com/questions/14027243/explain-what-a-div-tag-is-to-a-non-programmer)
