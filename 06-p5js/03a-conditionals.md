@@ -215,12 +215,12 @@ Does the following code evaluate to `true` or `false`?
 
 ## Answers
 ```
-1- true
-2- false
-3- true
-4- 'hi'
-5- 'bye'
-6- 'bye'
-7- false
-8- true
+1- 
+2- 
+3- 
+4- 
+5- 
+6- 
+7- 
+8- 
 ```
