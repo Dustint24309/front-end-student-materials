@@ -131,7 +131,7 @@ function draw() {
 
  The `background` function may be helpful here. It takes the same arguments `fill` and `stroke` do, but remember there is always the documentation!
  
-## Mini Challenge 2
+## Mega Challenge
 
 Logo Design! Below are a number of famous shapes from popular brands. How many can you identify? How many can you replicate using p5.js?
 
