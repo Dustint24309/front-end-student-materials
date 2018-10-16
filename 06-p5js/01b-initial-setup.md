@@ -5,8 +5,6 @@
 
 Create a new project in cloud9.  In cloud 9's terminal use the `mkdir` (short for "make directory") command to create a new folder. Inside that folder use the `touch` command to create two new files *inside that directory*. One called `index.html` and another called `sketch.js`.
 
-![mkdir](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/mkdir.gif)
-
 When you need to make another project you can use `mkdir` again to make another folder. You can copy the two files we'll make here and place them into any new project.
 
 Paste this code for an empty html document into `index.html`
