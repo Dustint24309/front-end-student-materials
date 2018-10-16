@@ -78,7 +78,7 @@ If you see a circle on the screen when you preview your `index.html` you're good
 
 ![our first program](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/setup3.gif)
 
-In the next lesson, we will explore more what that code you just wrote is doing. Good work 👍
+In the next lesson, we will explore more on what that code you just wrote is doing. Good work 👍
 
 ## Resources
 
