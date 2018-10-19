@@ -17,14 +17,14 @@ Paste this into your `sketch.js`:
 
 ```javascript
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(640, 480)
 }
 
 function draw() {
 
-  fill(225, 0, 150);
-  noStroke();
-  ellipse(mouseX, mouseY, 40, 40);
+  fill(225, 0, 150)
+  noStroke()
+  ellipse(mouseX, mouseY, 40, 40)
 }
 ```
 

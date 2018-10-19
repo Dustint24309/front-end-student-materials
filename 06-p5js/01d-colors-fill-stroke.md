@@ -2,20 +2,30 @@
 
 Now that you know how to draw shapes, let's add some color!
 
-
 ![jake paints](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/jake.gif)
+
+## Before you start...
+
+We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
+
+`mkdir 01d-colors-fill-stroke`
+`touch 01d-colors-fill-stroke/index.html`
+`touch 01d-colors-fill-stroke/sketch.js`
+
+Copy the code in the `index.html` file from our previous lab into our new `index.html` file.
 
 Start with this code in your `sketch.js` file to make a black and white line drawing of an apple.
 
 ```javascript
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(640, 480)
+  background(255, 255, 255)
 }
 
 function draw() {
-  ellipse(150, 150, 160, 160);
-  rect(145, 40, 10, 30);
-  quad(145, 70, 120, 60, 110, 45, 125, 50);
+  ellipse(150, 150, 160, 160)
+  rect(145, 40, 10, 30)
+  quad(145, 70, 120, 60, 110, 45, 125, 50)
 }
 ```
 
@@ -32,7 +42,7 @@ To fill in the shapes with color we will use a function called `fill`.
 To paint the apple a nice, rich red we can call the `fill` function at the beginning of `draw` with `200` for the red value, and `0` for blue and green.
 
 ```javascript
-fill(200, 0, 0);
+fill(200, 0, 0)
 ```
 ![all red apple](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/all-red-apple.gif)
 
@@ -49,14 +59,14 @@ Try this in your `draw` function:
 
 ```javascript
 function draw() {
-  fill(200, 0, 0);
-  ellipse(150, 150, 160, 160);
+  fill(200, 0, 0)
+  ellipse(150, 150, 160, 160)
 
   fill(150, 120, 0)
-  rect(145, 40, 10, 30);
+  rect(145, 40, 10, 30)
 
-  fill(0, 225, 0);
-  quad(145, 70, 120, 60, 110, 45, 125, 50);
+  fill(0, 225, 0)
+  quad(145, 70, 120, 60, 110, 45, 125, 50)
 }
 ```
 ![filled apple](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/filled-apple.png)
@@ -68,7 +78,7 @@ Say we wanted to take a bite out of this apple.  This can be done by drawing a s
 Here's where we want to place the ellipse:
 
 ```javascript
- ellipse(220, 120, 60, 60);
+ ellipse(220, 120, 60, 60)
 ```
 
 Watch the gif below closely.
@@ -99,22 +109,22 @@ Let's put it all together.
 
 ```javascript
 function draw() {
-  stroke(0);
-  strokeWeight(1);
-  fill(200, 0, 0);
-  ellipse(150, 150, 160, 160);
+  stroke(0)
+  strokeWeight(1)
+  fill(200, 0, 0)
+  ellipse(150, 150, 160, 160)
 
-  fill(150, 120, 0);
-  rect(145, 40, 10, 30);
+  fill(150, 120, 0)
+  rect(145, 40, 10, 30)
 
-  stroke(50, 150, 0);
-  strokeWeight(2);
-  fill(0, 225, 0);
-  quad(145, 70, 120, 60, 110, 45, 125, 50);
+  stroke(50, 150, 0)
+  strokeWeight(2)
+  fill(0, 225, 0)
+  quad(145, 70, 120, 60, 110, 45, 125, 50)
 
-  noStroke();
-  fill(255);
-  ellipse(220, 120, 60, 60);
+  noStroke()
+  fill(255)
+  ellipse(220, 120, 60, 60)
 }
 ```
 ![finished bite](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/apple-bite-stroke.png)
