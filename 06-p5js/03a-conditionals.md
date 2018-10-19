@@ -1,18 +1,38 @@
 # Conditional Logic
 
-![conditional bounce](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/conditional-bounce.gif)
+Welcome back! Here's what we're working on in this lab:
 
-Think about how you would write code that would produce the image above. Currently, we're missing one key tool that will enable us to write this code. Here's what we're able to do so far.  
+## Learning Targets and Objective
+- LT 1.13 - I can explain what a boolean value is and how to use it
+- LT 1.14 - I can use comparison operators in a conditional statement
+- Objective: Accurately answer 80% of the quick quiz questions at the end of this lab
+
+## Terminology Takedown
+- **conditional**
+- **boolean**
+- **evaluate**
+- **comparison**
+- **operator**
+
+## Before you start...
+
+We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
+
+`mkdir 03a-conditionals`
+`touch 03a-conditionals/index.html`
+`touch 03a-conditionals/sketch.js`
+
+Copy the code in the `index.html` file from our previous lab into our new `index.html` file.
 
 ```html
-<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
 	<title>p5 Project</title>
 	  
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
 	<script type="text/javascript" src="sketch.js"></script>
   </head>
   <body>
@@ -20,6 +40,13 @@ Think about how you would write code that would produce the image above. Current
   </body>
 </html>
 ```
+
+## Intro
+
+![conditional bounce](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/conditional-bounce.gif)
+
+Think about how you would write code that would produce the image above. Currently, we're missing one key tool that will enable us to write this code. Here's what we're able to do so far.  
+
 
 ```javascript
 // sketch.js
@@ -59,21 +86,32 @@ it's fill should be white,
 otherwise,
 it's fill should be black".  
 ```
-We have not really seen anything like that before. So far our code has only been read from top to bottom.  The first line gets read, then the second, then the third, and so on.  Here, on the other hand, we need to say "sometimes read line 4 and other times read line 6", depending on if some condition is met. A *condition* is something that is clearly either *true* or *false*, such as, the center of the ball is in the bottom half of the canvas or it's in the top.
+We have not really seen anything like that before. 
+So far our code has only been read from top to bottom.  
+The first line gets read, then the second, then the third, and so on.  
+Here, on the other hand, we need to say "sometimes read line 4 and other times read line 6", depending on if some condition is met. 
+A **condition** is something that is clearly either *true* or *false*, such as, the center of the ball is in the bottom half of the canvas or it's in the top.
 
 ## `if` Statements and Booleans
 
 The additional tool we'll be adding to our toolbox is an `if` statement. For the ball example the code would look like:
 
 ```javascript
-if ( the ball is in the black area ) {
-  fill(255);
+if (`< code-that-checks-if-the-ball-is-in-the-black-area >`) {
+  fill(255)
 }
 ```
 
-Only if the code inside the parentheses *evaluates* to `true`, will the line `fill(255);` ever be read by the computer. If the expression inside the `()` and after the `if` is false, it will never be run.  To demonstrate that really quick, let's use the special words `true` and `false` in JavaScript. These are what are called **Boolean values**.
+Only if the code inside the parentheses **evaluates** to `true`, will the line `fill(255)` ever be read by the computer. 
+If the code inside the `( )` and after the `if` is `false`, it will never be run.
+We say that the condition is either `true` and `false`. These are special words in JavaScript called **boolean values**. 
 
-That's a weird word, it comes from someone's name, George Boole. He studied logic concerning two values, true or false, on or off, 0 or 1.  That kind of thinking is fundamental to how computer's work.  After we study some basic Boolean logic using the Boolean values `true` and `false`, we'll discuss what it means for code to *evaluate* to `true` or `false`.
+
+That's a weird word, it comes from someone's name, George Boole. 
+He studied logic concerning two values, true or false, on or off, 0 or 1.  
+That kind of thinking is fundamental to how computer's work.  
+After we study some basic Boolean logic using the Boolean values `true` and `false`, 
+we'll discuss what it means for code to **evaluate** to `true` or `false`.
 
 ![your first if](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/first-if.gif)
 
@@ -92,8 +130,8 @@ The tool's we use to do this are called *comparison operators*, and they're not 
 - `<` less than
 - `>=` greater than OR equal to
 - `<=` less than OR equal to
-- `==` exactly equal to
-- `!=` NOT equal to
+- `===` exactly equal to
+- `!==` NOT equal to
 - `!` NOT (this means 'the opposite'. It will make anything `true` be `false`, and anything that is `false` be `true`)
 
 ![operators](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/operators.gif)
@@ -108,8 +146,8 @@ And that's them in action!
 Now we know how to complete this code:
 
 ```javascript
-if ( the-ball-is-in-the-black-area ) {
-  fill(255);
+if ( `< code-that-checks-if-the-ball-is-in-the-black-area >` ) {
+  fill(255)
 }
 ```
 A slightly more technical conditional to determine if the ball is in the bottom half of the canvas would be:
@@ -120,7 +158,7 @@ A slightly more technical conditional to determine if the ball is in the bottom 
 
  ```javascript
  if (y > height/2) {
-   fill(255);
+   fill(255)
  }
  ```
 
@@ -139,9 +177,9 @@ To take care of that "otherwise" part we can use an `else` statement.  An `else`
 
 ```javascript
 if (y > height/2) {
-  fill(255);
+  fill(255)
 } else {
-  fill(0);
+  fill(0)
 }
 ```
 It's cool to see how putting the problem into words translates really well into code.
@@ -156,8 +194,8 @@ Given the code:
 
 ```javascript
 // code for questions 1 - 3
-var highNumber = 99;
-var lowNumber = 30;
+var highNumber = 99
+var lowNumber = 30
 ```
 
 Will the following statements evaluate to `true` or `false`?
@@ -179,26 +217,26 @@ if (x < y) {
 
 **4** - What will the code above print if the variables were initialized as follows?
 ```javascript
-var x = 3;
-var y = 4;
+var x = 3
+var y = 4
 ```
 
 **5** - What will the code above print if the variables were initialized as follows?
 ```javascript
-var x = 3;
-var y = 2;
+var x = 3
+var y = 2
 ```
 
 **6** - What will the code above print if the variables were initialized as follows?
 ```javascript
-var x = 3;
-var y = 4;
-x = x + 1;
+var x = 3
+var y = 4
+x = x + 1
 ```
 
 ```javascript
 // code for questions 7 - 8
- var started = true;
+ var started = true
 ```
 
 Does the following code evaluate to `true` or `false`?

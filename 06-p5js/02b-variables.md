@@ -5,14 +5,18 @@ Welcome back! Here's what we're working on in this lab:
 ## Learning Targets and Objective
 - LT 1.9 - I can call functions using variables as arguments
 - LT 1.10 - I can write code to assign numbers to variables
+- LT 1.11 - I can explain how to increment and decrement variables
 - Objective: Build a racing simulation where the racer speeds are stored in variables
 
 ## Terminology Takedown
 - **data**
 - **variable**
-- **value**
-- **refactoring**
+- **declare**
+- **assign**
+- **increment**
+- **decrement**
 
+## Intro
 
 The concept of variables is fundamental to programming and extends beyond just a few p5.js built-in variables.  
 You can also create your own variables to store data and make your code easier to read, more descriptive, and easier to change.
@@ -69,13 +73,13 @@ The circles seem way too big. No worries...
 
 ![painful](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/painful.gif)
 
-Wow... that was painful to watch... so slow. What if I want to change the size again??
+This is going to take forever. What if I want to change the size again??
 
 There must be a better way.
 
 Notice how all those values are the same. Wouldn't it be great if I could change that value in **one place** and it would change everywhere in the code?
 
-Well, there is a way to do this-- We can create our own variables.
+What we need here are **variables**.
 
 ## Declaring and Assigning Variables
 
@@ -157,7 +161,8 @@ This is a perfect place to use a variable because we need a value for the `x` co
 
 ### Incrementing Variables
 
-Imagine you have a variable called `age` that stores the value of your current age.  Then you have a birthday! You'd have to tell your variable that it's new value should be *whatever it's current value is* plus one additional year.
+Imagine you have a variable called `age` that stores the value of your current age.  
+Then you have a birthday! You'd have to tell your variable that it's new value should be *whatever it's current value is* plus one additional year.
 
 ![b-day](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/bday.gif)
 
