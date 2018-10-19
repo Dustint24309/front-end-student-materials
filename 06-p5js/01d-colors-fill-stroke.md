@@ -162,7 +162,7 @@ function draw() {
 
  1. On a the same canvas, add at least three different shapes with three different colors.  Experiment with changing the Red, Green, and Blue values to produce different colors.  How do you make a yellow color?
 
- 2. You've seen a method like `fill` or `stroke` called with 1 argument and with 3 arguments. One more way these functions can be used is to supply an additional *4th argument*. This should be a number between 0 and 100 that determines how *opaque* or *transparent* or *see-through* the color should be. This is sometimes referred to as the **alpha** of the color. `0` signifies total transparency (it would be invisible) and `100` represents a totally opaque color (not see-through at all).  Add some transparency to your shapes above. Make two transparent shapes overlap.
+ 2. You've seen a method like `fill` or `stroke` called with 1 argument and with 3 arguments. One more way these functions can be used is to supply an additional *4th argument*. This should be a number between 0 and 255 that determines how *opaque* or *transparent* or *see-through* the color should be. This is sometimes referred to as the **alpha** of the color. `0` signifies total transparency (it would be invisible) and `255` represents a totally opaque color (not see-through at all).  Add some transparency to your shapes above. Make two transparent shapes overlap.
 
  3. Now that you're an expert on color and opacity, use the code above that created the apple to add a gleam of light on the apple and make it rest on a colored countertop. The result should look something like this:
 
