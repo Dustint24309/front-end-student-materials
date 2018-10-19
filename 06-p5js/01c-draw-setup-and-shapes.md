@@ -1,4 +1,23 @@
 # Functions: `draw`, `setup`, and Shapes
+
+Welcome back! Here's what we're working on in this lab:
+
+## Learning Targets and Objective
+- LT 1.3 - I can describe what a function is and how to create one using ( ) and { }
+- LT 1.4 - I can explain the difference between calling a function and defining a function
+- LT 1.5 - I know what an argument to a function is and can explain how they customize functions
+- Objective: Draw the Olympic Rings using the ellipse function
+
+## Terminology Takedown
+- **function**
+- **define**
+- **call**
+- **argument**
+- **coordinates**
+- **parameters**
+- **documentation**
+
+
 ![dolphin](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/dolphin.gif)
 
 Every artist needs a canvas. Obviously.

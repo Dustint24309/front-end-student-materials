@@ -1,9 +1,23 @@
 # Initial setup
 
+Welcome back! Here's what we're working on in this lab:
+
+## Learning Targets and Objective
+- LT 1.1 - I can use mkdir and touch commands to create new directories and files in the terminal
+- LT 1.2 - I can use script tags to link to other JavaScript files
+- Objective: Create an index.html file and a sketch.js file and link the p5.js library so we can use it in future labs.
+
+## Terminology Takedown
+- **files**
+- **directories**
+- **terminal**
+- **script**
+
 ### Let's dive right in
 ![dive](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/dive.gif)
 
-Create a new project in cloud9.  In cloud 9's terminal use the `mkdir` (short for "make directory") command to create a new folder. Inside that folder use the `touch` command to create two new files *inside that directory*. One called `index.html` and another called `sketch.js`.
+Create a new project in cloud9.  In cloud 9's terminal use the `mkdir` (short for "make directory") command to create a new folder. 
+Inside that folder use the `touch` command to create two new files *inside that directory*. One called `index.html` and another called `sketch.js`.
 
 ![mkdir](/resources/mkdir-touch.gif "Mkdir and touch gif")
 
@@ -28,7 +42,7 @@ Paste this code for an empty html document into `index.html`
 The first thing we need to do is
 hook up our project with the p5.js library.
 
-Try visiting `https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js` in your browser.
+Try visiting `https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js` in your browser.
 
 ![so much](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/cdnjs.gif)
 
@@ -41,7 +55,7 @@ the code we want to use lives elsewhere- at that web address- you can use the `s
 Paste this into the `head` tag in your `index.html` file:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
 ```
 
 ![paste the script tag](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/setup1.gif)
@@ -66,7 +80,7 @@ To test that everything works, paste this code into your empty `sketch.js` file.
 
 ```javascript
 function setup() {
-
+  createCanvas(500, 500)
 }
 
 function draw() {

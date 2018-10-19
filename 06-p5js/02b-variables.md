@@ -1,6 +1,21 @@
 # Creating Your Own Variables
 
-The concept of variables is fundamental to programming and extends beyond just a few p5.js built-in variables.  You can also create your own variables to store data and make your code easier to read, more descriptive, and easier to change.
+Welcome back! Here's what we're working on in this lab:
+
+## Learning Targets and Objective
+- LT 1.9 - I can call functions using variables as arguments
+- LT 1.10 - I can write code to assign numbers to variables
+- Objective: Build a racing simulation where the racer speeds are stored in variables
+
+## Terminology Takedown
+- **data**
+- **variable**
+- **value**
+- **refactoring**
+
+
+The concept of variables is fundamental to programming and extends beyond just a few p5.js built-in variables.  
+You can also create your own variables to store data and make your code easier to read, more descriptive, and easier to change.
 
 ## Off to the Races
 
@@ -10,22 +25,24 @@ Our goal is to make a series of circles race across the screen to the finish lin
 
 ![race](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/race.gif)
 
-Often when you write code you'll start with a first draft the way you would when writing an essay. The process of refining and working toward the final draft that is the most clear and efficient is what is known as **refactoring**.  We'll do some refactoring together here.
+Often when you write code you'll start with a first draft the way you would when writing an essay. 
+The process of refining and working toward the final draft that is the most clear and efficient is what is known as **refactoring**.  
+We'll do some refactoring together here.
 
 
 Let's start by getting the background and finish line up on the canvas.
 
 ```javascript
 function setup() {
-  createCanvas(600, 500);
+  createCanvas(600, 500)
 }
 
 function draw() {
-  background(200, 225, 255);
+  background(200, 225, 255)
 
-  strokeWeight(4);
+  strokeWeight(4)
   stroke(0)
-  line(580, 0, 580, height);
+  line(580, 0, 580, height)
 }
 ```
 
@@ -33,13 +50,17 @@ Not worrying about any movement yet, let's draw 4 ellipses on the left hand side
 
 ```javascript
 function draw() {
-  //...previous code
-  strokeWeight(1)
+  background(200, 225, 255)
 
-  ellipse(0, 100, 100, 100);
-  ellipse(0, 200, 100, 100);
-  ellipse(0, 300, 100, 100);
-  ellipse(0, 400, 100, 100);
+  strokeWeight(4)
+  stroke(0)
+  line(580, 0, 580, height)
+  
+  strokeWeight(1)
+  ellipse(0, 100, 100, 100)
+  ellipse(0, 200, 100, 100)
+  ellipse(0, 300, 100, 100)
+  ellipse(0, 400, 100, 100)
 }
 ```
 ![too big](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/too-big-to-start.png)
@@ -65,7 +86,7 @@ Since that number that was the same for every ellipse is the size of each racing
 Making a variable is pretty simple, at the top of the file outside any function write
 
 ```javascript
-var racerSize = 60;
+var racerSize = 60
 ```
 
 That's it. Now instead of **hard-coding** in the number `60` or whatever it is, place the variable name `racerSize` as the third and fourth arguments to each `ellipse` function. Check this out:
@@ -77,8 +98,8 @@ SO MUCH NICER! Not only is our job easier if we have to change something, the co
 Though that seemed pretty straightforward, there are actually two distinct parts to creating a variable. We wrote it out on one line, but you can also write it out across two. Let's do that here to be super clear.
 
 ```javascript
-var racerSize;
-racerSize = 60;
+var racerSize
+racerSize = 60
 ```
 #### Variable Declaration
 
@@ -100,28 +121,27 @@ I see an additional place that we may want to use variables, that is the startin
 Let's add two variables `startX` and `startY`. The first argument to every `ellipse` function will be `startX`, and the second argument will have some relationship to our initial value of `startY`.
 
 ```javascript
-var racerSize = 40;
-var startX = 0;
-var startY = 100;
+var racerSize = 40
+var startX = 0
+var startY = 100
 
 function setup() {
-  createCanvas(600, 500);
+  createCanvas(600, 500)
 }
 
 function draw() {
-  background(200, 225, 255);
-
-  strokeWeight(4);
+  background(200, 225, 255)
+  strokeWeight(4)
   stroke(0)
-  line(580, 0, 580, height);
+  line(580, 0, 580, height)
 
 
   strokeWeight(1)
 
-  ellipse(startX, startY, racerSize, racerSize);
-  ellipse(startX, startY * 2, racerSize, racerSize);
-  ellipse(startX, startY * 3, racerSize, racerSize);
-  ellipse(startX, startY * 4, racerSize, racerSize);
+  ellipse(startX, startY, racerSize, racerSize)
+  ellipse(startX, startY * 2, racerSize, racerSize)
+  ellipse(startX, startY * 3, racerSize, racerSize)
+  ellipse(startX, startY * 4, racerSize, racerSize)
 }
 ```
 
@@ -148,7 +168,7 @@ Here's how that is done in code:
 Notice that line:
 
 ```javascript
-age = age + 1;
+age = age + 1
 ```
 
 That's another thing about variables that doesn't make sense from math class.  Of course `age` would never be equal to `age + 1`. The difference is that here the equals sign doesn't mean the one side *equals* the other, it's about *assigning* the value on the right to the variable on the left. We are actually saying that the new value of `age` should be assigned to whatever the current value is + 1, which is just what we wanted to say. Note that *we never used the word `var`*, the variable was already declared and only had to be re-assigned a new value.
@@ -169,35 +189,35 @@ Hopefully that was clear, let that take a moment to sink in before seeing how it
 A 4 way tie! Every time `draw` is called the `x` coordinate of each circle has increased by `2`.  Here's the final code with an additional variable `speed`:
 
 ```javascript
-var racerSize = 40;
-var startX = 0;
-var startY = 100;
-var speed = 2;
+var racerSize = 40
+var startX = 0
+var startY = 100
+var speed = 2
 
 function setup() {
-  createCanvas(600, 500);
+  createCanvas(600, 500)
 }
 
 function draw() {
-  background(200, 225, 255);
+  background(200, 225, 255)
 
-  strokeWeight(4);
+  strokeWeight(4)
   stroke(0)
-  line(580, 0, 580, height);
+  line(580, 0, 580, height)
 
 
   strokeWeight(1)
 
-  ellipse(startX, startY, racerSize, racerSize);
-  ellipse(startX, startY * 2, racerSize, racerSize);
-  ellipse(startX, startY * 3, racerSize, racerSize);
-  ellipse(startX, startY * 4, racerSize, racerSize);
+  ellipse(startX, startY, racerSize, racerSize)
+  ellipse(startX, startY * 2, racerSize, racerSize)
+  ellipse(startX, startY * 3, racerSize, racerSize)
+  ellipse(startX, startY * 4, racerSize, racerSize)
 
-  startX = startX + speed;
+  startX = startX + speed
 }
 ```
 
 ## Mini-Challenge
 
 1. You probably noticed all 4 racers move at the same speed. Take the code above and modify it so the different circles move at different speeds. Replace the variable `speed` with at least 3 different speed variables such as `winningSpeed`, `averageSpeed`, `losingSpeed`.  To make the different racers move differently you'll need multiple variables for their `x` locations instead of one variable `startX`. As a suggestion you could use `racer1X`, `racer2X`, etc.  All of those variables will need to be incremented at the bottom of `draw`.
-2. STRETCH GOAL -- Only if you have time. Use a variable to make each racer a different shade of the same color. Look at the way the `startY` variable is used for inspiration.
+2. EXTRA GOAL -- Only if you have time. Use a variable to make each racer a different shade of the same color. Look at the way the `startY` variable is used for inspiration.

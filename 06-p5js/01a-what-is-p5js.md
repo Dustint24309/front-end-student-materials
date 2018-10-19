@@ -1,5 +1,18 @@
 # What is p5.js
 
+Welcome back! Here's what we're working on in this lab:
+
+## Learning Targets and Objective
+- LT 1.0 - I can explain what a code library is
+- Objective: Explore the p5.js library in JavaScript
+
+## Terminology Takedown
+- **library**
+- **programming**
+- **animations**
+- **events**
+- **web browser**
+
 ## Introduction
 
 Every day you probably use a sink or shower to get water at a certain temperature.
