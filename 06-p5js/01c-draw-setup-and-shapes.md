@@ -27,7 +27,9 @@ Every artist needs a canvas. Obviously.
 We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
 
 `mkdir 01c-draw-setup-and-shapes`
+
 `touch 01c-draw-setup-and-shapes/index.html`
+
 `touch 01c-draw-setup-and-shapes/sketch.js`
 
 Copy the code in the `index.html` file from our previous lab into our new `index.html` file.

@@ -19,7 +19,9 @@ Welcome back! Here's what we're working on in this lab:
 We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
 
 `mkdir 02c-built-in-events`
+
 `touch 02c-built-in-events/index.html`
+
 `touch 02c-built-in-events/sketch.js`
 
 Copy the code in the `index.html` file from our previous lab into our new `index.html` file.

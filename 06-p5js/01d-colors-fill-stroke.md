@@ -22,7 +22,9 @@ Now that you know how to draw shapes, let's add some color!
 We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
 
 `mkdir 01d-colors-fill-stroke`
+
 `touch 01d-colors-fill-stroke/index.html`
+
 `touch 01d-colors-fill-stroke/sketch.js`
 
 Copy the code in the `index.html` file from our previous lab into our new `index.html` file.

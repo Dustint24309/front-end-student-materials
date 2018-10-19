@@ -11,18 +11,19 @@ Welcome back! Here's what we're working on in this lab:
 - **conditional**
 - **boolean**
 - **evaluate**
-- **comparison**
-- **operator**
+- **comparison operator**
 
 ## Before you start...
 
 We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
 
 `mkdir 03a-conditionals`
+
 `touch 03a-conditionals/index.html`
+
 `touch 03a-conditionals/sketch.js`
 
-Copy the code in the `index.html` file from our previous lab into our new `index.html` file.
+Copy this code into our new `index.html` file.
 
 ```html
 

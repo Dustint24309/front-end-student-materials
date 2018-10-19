@@ -3,16 +3,16 @@
 Welcome back! Here's what we're working on in this lab:
 
 ## Learning Targets and Objective
-- LT 1.15 - I can explain what a boolean value is and how to use it
-- LT 1.14 - I can use comparison operators in a conditional statement
-- Objective: Accurately answer 80% of the quick quiz questions at the end of this lab
+- LT 1.15 - I can use an if / else statemetn 1, 2, or 3+ branches
+- LT 1.16 - I can use logical operators to combine conditions
+- Objective: Construct an animation where a ball bounces off the top and bottom walls using conditionals and logical operators.
 
 ## Terminology Takedown
 - **conditional**
 - **boolean**
-- **evaluate**
-- **comparison**
-- **operator**
+- **control flow**
+- **comparison operator**
+- **logical operator** 
 
 ## Before you start...
 
@@ -64,15 +64,15 @@ function draw() {
   rect(0, height/2, width, height/2)
 
   if (y > height/2 ) {
-    fill(255);
+    fill(255)
   } else {
-    fill(0);
+    fill(0)
   }
 
-  ellipse(x, y, 20, 20);
+  ellipse(x, y, 20, 20)
 
-  x += 1;
-  y += 2;
+  x += 1
+  y += 2
 
 }
 ```
@@ -93,14 +93,36 @@ it's y coordinate should start to decrease each time draw is called
 A decreasing `y` value means it would be heading back up toward the top.  Our first attempt might be something like this,
 
 ```javascript
-function draw() {
-  //... all our code
+var x = 1
+var y = 1
 
-  x += 1;
-  y += 2;
+function setup() {
+  createCanvas(600, 200)
+}
+
+
+function draw() {
+  noStroke()
+
+  fill(255);
+  rect(0, 0, width, height/2)
+
+  fill(0);
+  rect(0, height/2, width, height/2)
+
+  if (y > height/2 ) {
+    fill(255)
+  } else {
+    fill(0)
+  }
+
+  ellipse(x, y, 20, 20)
+
+  x += 1
+  y += 2
 
   if (y > height) {
-    y -= 2;
+    y -= 2
   }
 }
 ```
@@ -131,17 +153,38 @@ The problem here stems from the fact that we need to do more than `y -= 2` one t
 What if instead we incremented with `+=` every single call to `draw`.  Only sometimes we incremented with a *negative number*. The value we increment with can flip from negative to positive and since adding a negative number is the same as subtracting we should be all good! To do this, we'll make an additional variable called `ySpeed`.
 
 ```javascript
-//... previous code
-var ySpeed = 2;
+var x = 1
+var y = 1
+var ySpeed = 2
+
+function setup() {
+  createCanvas(600, 200)
+}
 
 function draw() {
-  //... previous code
+  noStroke()
 
-  if (y > height) {
-    ySpeed = -2;
+  fill(255);
+  rect(0, 0, width, height/2)
+
+  fill(0);
+  rect(0, height/2, width, height/2)
+
+  if (y > height/2 ) {
+    fill(255)
+  } else {
+    fill(0)
   }
 
-  y += ySpeed;
+  ellipse(x, y, 20, 20)
+
+  x += 1
+  
+  if (y > height) {
+    ySpeed = -2
+  }
+
+  y += ySpeed
 
 }
 ```
@@ -178,9 +221,9 @@ Change the conditional to:
 
 ```javascript
 if (y > height) {
-  ySpeed = -2;
+  ySpeed = -2
 } else if (y < 0) {
-  ySpeed = 2;
+  ySpeed = 2
 }
 ```
 
@@ -190,21 +233,23 @@ That should basically work-- Congrats!
 
 ## More on `else if` statements
 
-An `if` statement can be followed by any number of `else if`s. The order of them is very important. The computer will go through them from top to bottom and find the first one that matches (evaluates to `true`).
+An `if` statement can be followed by any number of `else if`s. The order of them is very important. 
+The computer will go through them from top to bottom and find the first one that matches (evaluates to `true`).
 
 Consider this code:
 
 ```javascript
 if (x > 10) {
-  print(10);
+  print(10)
 } else if ( x > 5) {
-  print(5);
+  print(5)
 } else if ( x > 0) {
-  print(0);
+  print(0)
 }
 ```
 
-Imagine you are the computer running this code and I told you the value of `x` was 12.  You would start at the top and find the first `if` that is `true`. What value would you print if `x = 12`?
+Imagine you are the computer running this code and I told you the value of `x` was 12.  
+You would start at the top and find the first `if` that is `true`. What value would you print if `x = 12`?
 
 `10`. Perfect.
 
@@ -215,21 +260,22 @@ Now what if `x = 6`?
 Ok, let's change the code you are running to this:
 ```javascript
 if (x > 0) {
-  print(0);
+  print(0)
 } else if ( x > 5) {
-  print(5);
+  print(5)
 } else if ( x > 10) {
-  print(10);
+  print(10)
 }
 ```
 
 A small change, you may think, but now `x` could be any positive number, `12`, `6`, `1`, `100` and you would print `0` every time.
 
-There is no way for the lines `print(5);` or `print(10);` to get read. The first `if` catches all positive numbers.
+There is no way for the lines `print(5)` or `print(10)` to get read. The first `if` catches all positive numbers.
 
 See why the order of your `else if`s is important?
 
-If you want a *default case*, some code that should be run only if *none of the if's are true*. You can put an `else` at the bottom to catch any input that doesn't match.
+If you want a *default case*, some code that should be run only if *none of the if's are true*. 
+You can put an `else` at the bottom to catch any input that doesn't match.
 
 ## A Quick Refactor, Logical Operators
 
@@ -237,25 +283,27 @@ Though our code above works, I am not totally satisfied with this
 
 ```javascript
 if (y > height) {
-  ySpeed = -2;
+  ySpeed = -2
 } else if (y < 0) {
-  ySpeed = 2;
+  ySpeed = 2
 }
 ```
 
-Notice that the value of `ySpeed` remains the same (it's always the number `2`) only the sign (`+` or `-`) flips or toggles back and forth.  Can't we toggle the sign of a number by multiplying by `-1` ?
+Notice that the value of `ySpeed` remains the same (it's always the number `2`) only the sign (`+` or `-`) flips or toggles back and forth.  
+Can't we toggle the sign of a number by multiplying by `-1` ?
 
 I want code that looks like this:
 
 ```
 if (the ball is past the bottom OR past the top) {
-  ySpeed = ySpeed * -1;
+  ySpeed = ySpeed * -1
 }
 
-y += ySpeed;
+y += ySpeed
 ```
 
-See that capitalized 'OR', we can write that in code with two pipe symbols `||`. This key is generally above the enter button on your keyboard.  
+See that capitalized 'OR', we can write that in code with two pipe symbols `||`. 
+This key is generally above the enter button on your keyboard.  
 
 'OR' is called a **Logical Operator**,
 another Logical Operator is 'AND', we write that in code with two ampersands like so `&&`. ('ampersand' if the name of the '&' symbol, if you didn't know).  
@@ -264,11 +312,12 @@ The finished refactored code looks like:
 
 ```javascript
 if (y > height || y < 0) {
-  ySpeed = ySpeed * -1;
+  ySpeed = ySpeed * -1
 }
 ```
 
-I think this is more clear. It's how I would explain the problem to someone in words. "If the ball goes below the bottom or above the top, toggle the direction".
+I think this is more clear. It's how I would explain the problem to someone in words. 
+"If the ball goes below the bottom or above the top, toggle the direction".
 
 Nice job!
 
