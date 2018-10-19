@@ -16,6 +16,16 @@ Welcome back! Here's what we're working on in this lab:
 - **increment**
 - **decrement**
 
+## Before you start...
+
+We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
+
+`mkdir 02b-variables`
+`touch 02b-variables/index.html`
+`touch 02b-variables/sketch.js`
+
+Copy the code in the `index.html` file from our previous lab into our new `index.html` file.
+
 ## Intro
 
 The concept of variables is fundamental to programming and extends beyond just a few p5.js built-in variables.  

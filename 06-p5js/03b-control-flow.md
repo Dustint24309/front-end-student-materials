@@ -1,23 +1,67 @@
 # Control Flow, Animation
 
+Welcome back! Here's what we're working on in this lab:
+
+## Learning Targets and Objective
+- LT 1.15 - I can explain what a boolean value is and how to use it
+- LT 1.14 - I can use comparison operators in a conditional statement
+- Objective: Accurately answer 80% of the quick quiz questions at the end of this lab
+
+## Terminology Takedown
+- **conditional**
+- **boolean**
+- **evaluate**
+- **comparison**
+- **operator**
+
+## Before you start...
+
+We'll do this before almost every lab. Use the `mkdir` command to create a new folder, and the `touch` command to create two new files.
+
+`mkdir 03b-control-flow`
+
+`touch 03b-control-flow/index.html`
+
+`touch 03b-control-flow/sketch.js`
+
+Copy this code into our new `index.html` file.
+
+```html
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+	<title>p5 Project</title>
+	  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+	<script type="text/javascript" src="sketch.js"></script>
+  </head>
+  <body>
+
+  </body>
+</html>
+```
+
+
 Here's the code we left off with last time
 
 ```javascript
-var x = 1;
-var y = 1;
+var x = 1
+var y = 1
 
 function setup() {
-  createCanvas(600, 200);
+  createCanvas(600, 200)
 }
 
 function draw() {
-  noStroke();
+  noStroke()
 
   fill(255);
-  rect(0, 0, width, height/2);
+  rect(0, 0, width, height/2)
 
   fill(0);
-  rect(0, height/2, width, height/2);
+  rect(0, height/2, width, height/2)
 
   if (y > height/2 ) {
     fill(255);
