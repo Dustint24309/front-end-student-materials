@@ -44,7 +44,7 @@ but when you write the name you get the value that's inside the bucket.
 
 To prove that these variables exist, we'll use the `print` function. If you open up the developer tools in Chrome and click in the console tab (by either right clicking the screen then clicking "Inspect" or use a keyboard, usually command+option+j) you will be able to see whatever is logged to the console with `print`.
 
-![print width](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/print-width.gif)
+![print width](/resources/print-width.gif)
 
 As shown here, we see the *value* of the variable `width`, `800` logged to the console. In fact, it's logged many, many times in a row because `draw` is called repeatedly over and over. Each time it prints the value of the variable `width`. That's what the gray and white increasing number in the console indicates, the same output is being printed multiple times.
 
